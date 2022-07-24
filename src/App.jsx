@@ -5,7 +5,6 @@ import SongProvider from "./contexts/Song";
 
 import WithSidebar from "./components/Misc/WithSidebar";
 import PlaylistById from "./components/PlaylistById";
-import Home from "./components/Home";
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<WithSidebar />}>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<PlaylistById />} />
               <Route path="/playlists/:playlistId" element={<PlaylistById />} />
             </Route>
           </Routes>
