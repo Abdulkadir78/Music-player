@@ -2,11 +2,11 @@ import { useState } from "react";
 import { MdOutlineQueueMusic } from "react-icons/md";
 import { IoMusicalNotesSharp } from "react-icons/io5";
 
-import Logo from "../../assets/images/logo.svg";
+import Brand from "./Brand";
 import SongsMobileMenu from "./SongsMobileMenu";
 import PlaylistMobileMenu from "./PlaylistMobileMenu";
 
-function MobileNav({ playlists }) {
+function MobileNav() {
   const [showPlaylistMenu, setShowPlaylistMenu] = useState(false);
   const [showSongsMenu, setShowSongsMenu] = useState(false);
 
@@ -25,7 +25,7 @@ function MobileNav({ playlists }) {
           className="text-3xl"
           onClick={togglePlaylistMenu}
         />
-        <img src={Logo} alt="logo" className="mx-auto lg:mx-0" />
+        <Brand />
         <IoMusicalNotesSharp className="text-2xl" onClick={toggleSongsMenu} />
       </div>
 

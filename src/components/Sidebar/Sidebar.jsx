@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 
 import { PlaylistContext } from "../../contexts/Playlist";
 import Profile from "../../assets/images/profile.svg";
-import Logo from "../../assets/images/logo.svg";
 import MobileNav from "./MobileNav";
 import Playlists from "./Playlists";
+import Brand from "./Brand";
 
 function Sidebar() {
   const { playlistId } = useParams();
@@ -35,9 +35,7 @@ function Sidebar() {
   return (
     <>
       <div className="relative h-[90vh] hidden lg:block">
-        <a href="/">
-          <img src={Logo} alt="logo" />
-        </a>
+        <Brand />
 
         <div className="mt-14">
           <Playlists />
